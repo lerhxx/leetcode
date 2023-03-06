@@ -3,3 +3,16 @@ function swap(arr, a, b) {
     arr[a] = arr[b]
     arr[b] = temp
 }
+
+function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val)
+    this.next = (next === undefined ? null : next)
+}
+
+function createListNode(arr) {
+    const head = new ListNode(arr[0])
+    for (let i = 1; i < arr.length; ++i) {
+        head.next = new ListNode(arr[i])
+    }
+    return head
+}
