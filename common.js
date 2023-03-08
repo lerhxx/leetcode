@@ -11,8 +11,10 @@ function ListNode(val, next) {
 
 function createListNode(arr) {
     const head = new ListNode(arr[0])
+    let p = head
     for (let i = 1; i < arr.length; ++i) {
-        head.next = new ListNode(arr[i])
+        p.next = new ListNode(arr[i])
+        p = p.next
     }
     return head
 }
