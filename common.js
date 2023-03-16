@@ -18,3 +18,12 @@ function createListNode(arr) {
     }
     return head
 }
+
+function consoleListNode(head) {
+    let arr = []
+    while(head) {
+        arr.push(head.val)
+        head = head.next
+    }
+    return arr.join(',')
+}
