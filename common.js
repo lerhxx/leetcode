@@ -27,3 +27,10 @@ function consoleListNode(head) {
     }
     return arr.join(',')
 }
+
+
+function TreeNode(val, left, right) {
+    this.val = val
+    this.left = left === undefined ? null : left
+    this.right = right === undefined ? null : right
+}
