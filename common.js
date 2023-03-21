@@ -34,3 +34,19 @@ function TreeNode(val, left, right) {
     this.left = left === undefined ? null : left
     this.right = right === undefined ? null : right
 }
+
+function createTree(arr, index) {
+    if (index >= arr.length) {
+        return new TreeNode(null)
+    }
+    const root = new TreeNode(arr[index])
+    const leftIndex = 2 * index + 1
+    const rightIndex = 2 * index + 2
+    if (arr[leftIndex]) {
+        root.left = createTree(arr, leftIndex)
+    }
+    if (arr[rightIndex]) {
+        root.right = createTree(arr, rightIndex)
+    }
+    return root
+}
