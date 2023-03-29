@@ -35,7 +35,7 @@ function TreeNode(val, left, right) {
     this.right = right === undefined ? null : right
 }
 
-function createTree(arr, index) {
+function createTree(arr, index = 0) {
     if (index >= arr.length) {
         return new TreeNode(null)
     }
